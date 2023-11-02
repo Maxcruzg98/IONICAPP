@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { DbService } from 'src/app/services/db.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginPage implements OnInit {
   mdl_contrasena : string = '';
 
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, private db: DbService) { }
 
   ngOnInit() {
   }
