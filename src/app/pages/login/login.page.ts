@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginPage implements OnInit {
   mdl_contrasena : string = '';
 
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
   }
@@ -19,7 +20,14 @@ export class LoginPage implements OnInit {
 
 
   ingresar() {
-    
+    let extras: NavigationExtras = {
+      replaceUrl: true,
+      state: {
+        usuario: this.mdl_usuario,
+        contrasena: this.mdl_contrasena
+      }
+    }
+    this.router.navigate(['principal'], extras);
   }
 
 }

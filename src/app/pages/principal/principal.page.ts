@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-principal',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalPage implements OnInit {
 
-  constructor() { }
+usuario: string = '';
+contrasena: string = '';
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    let extras = this.router.getCurrentNavigation();
+    if(extras?.extras.state){
+
+      this.usuario = extras?.extras.state['usuario'];
+      this.contrasena = extras?.extras.state['contrasena'];
+    }
+
+
   }
 
 }
