@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  
+  <div class="navbar">
+    <ion-toolbar class="navbar">
+      <ion-title>Inicio Sesión</ion-title>
+    </ion-toolbar>
+  </div>
+  </ion-header>
+<br><br>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="centrar">
+    <div class="imagen-principal">
+      <img alt="Silhouette of mountains" src="assets/duoc-logo.png" />
+    </div>
+
+      <ion-card-header class="titulo">
+        <ion-card-title class="subtitulo">Ingrese sus datos para iniciar sesion</ion-card-title>
+      </ion-card-header>
+
+      <ion-item class="ion-margin-top input">
+        <ion-input [(ngModel)]="mdl_usuario" label="Correo" labelPlacement="floating" placeholder="Ingrese su usuario"></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-margin-top input">
+        <ion-input [(ngModel)]="mdl_contrasena" label="password" type="password" labelPlacement="floating" placeholder="Ingrese su contraseña"></ion-input>
+      </ion-item>
+
+ 
+      <ion-button expand="block" (click)="ingresar"  class="boton ion-margin-top">Ingresar</ion-button>
+ 
+
+      <ion-button expand="block" class="boton ion-margin-top">Recuperar password</ion-button>
+
+  </ion-card>
+  
+</ion-content>

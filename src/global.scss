@@ -24,3 +24,39 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+.navbar {
+
+    --background:rgb(33, 32, 32);
+    --color: white;
+}
+.boton{
+    --color:white;
+    --background:rgb(33, 32, 32);
+    margin: 20px;
+
+}
+
+.input{
+    border: solid 1px black;
+    margin: 20px;
+}
+.imagen-principal{
+    margin-top: 15px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.centrar{
+
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    border: solid 1px black;
+}
+.subtitulo{
+    
+}
+
